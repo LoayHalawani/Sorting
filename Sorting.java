@@ -130,6 +130,9 @@ public class Sorting {
 	// Driver
 	public static void main(String[] args) {
 		int[] arr = {9, 8, 7, 6, 5, 4, 3, 2, 1};
+
+		System.out.println("Array before sorting:");
+		System.out.println(Arrays.toString(arr));
 		
 		bubbleSort(arr);
 		selectionSort(arr);
@@ -137,6 +140,7 @@ public class Sorting {
 		mergeSort(arr, 0, arr.length - 1);
 		quickSort(arr, 0, arr.length - 1);
 		
+		System.out.println("\nArray after sorting:");
 		System.out.println(Arrays.toString(arr));
 	}
 } 
