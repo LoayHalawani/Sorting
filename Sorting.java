@@ -131,8 +131,10 @@ public class Sorting {
 	public static void main(String[] args) {
 		int[] arr = {9, 8, 7, 6, 5, 4, 3, 2, 1};
 
-		System.out.println("Array before sorting:");
+		System.out.print("Array: ");
 		System.out.println(Arrays.toString(arr));
+
+		System.out.println("\nSorting...");
 		
 		bubbleSort(arr);
 		selectionSort(arr);
@@ -140,7 +142,7 @@ public class Sorting {
 		mergeSort(arr, 0, arr.length - 1);
 		quickSort(arr, 0, arr.length - 1);
 		
-		System.out.println("\nArray after sorting:");
+		System.out.print("\nArray: ");
 		System.out.println(Arrays.toString(arr));
 	}
 } 
