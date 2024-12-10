@@ -67,13 +67,11 @@ public class Sorting {
 		for(int i = 0; i < n1; i ++) {
 			leftArr[i] = arr[left + i]; 
 		}
-
 		for(int i = 0; i < n2; i ++) {
 			rightArr[i] = arr[mid + 1 + i];
 		}
 
 		int i = 0, j = 0, k = left;
-
 		while(i < n1 && j < n2) {
 			if(leftArr[i] <= rightArr[j]) {
 				arr[k] = leftArr[i];
@@ -91,7 +89,6 @@ public class Sorting {
 			i ++;
 			k ++;
 		}
-
 		while(j < n2) {
 			arr[k] = rightArr[j];
 			j ++;
@@ -104,7 +101,9 @@ public class Sorting {
 		if(left >= right) {
 			return;
 		}
+		
 		int pivot = partition(arr, left, right);
+		
 		quickSort(arr, left, pivot - 1);
 		quickSort(arr, pivot + 1, right);
 	}
@@ -118,8 +117,10 @@ public class Sorting {
 				swap(arr, i, j);
 			}
 		}
+		
 		i ++;
 		swap(arr, i, right);
+		
 		return i;
 	}
 
