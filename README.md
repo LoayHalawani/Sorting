@@ -1,6 +1,6 @@
-# Description
+# Note
 
-A Java implementation of several sorting algorithms. Includes Bubble, Selection, Insertion, Merge, and Quick Sort.
+Code includes Bubble, Selection, Insertion, Merge, and Quick Sort.
 
 # How-to-run
 
