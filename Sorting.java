@@ -21,14 +21,14 @@ public class Sorting {
 
 	// Selection Sort
 	private static void selectionSort(int[] arr) {
-		for(int k = 0; k < arr.length - 1; k ++) {
-			int minIndex = k;
-			for(int i = k + 1; i < arr.length; i ++) {
-				if(arr[i] < arr[minIndex]) {
-					minIndex = i;
+		for(int i = 0; i < arr.length - 1; i ++) {
+			int minIndex = i;
+			for(int j = i + 1; j < arr.length; j ++) {
+				if(arr[j] < arr[minIndex]) {
+					minIndex = j;
 				}
 			}
-			swap(arr, k, minIndex);
+			swap(arr, i, minIndex);
 		}
 	}
 
@@ -78,13 +78,12 @@ public class Sorting {
 			if(leftArr[i] <= rightArr[j]) {
 				arr[k] = leftArr[i];
 				i ++;
-				k ++;
 			}
 			else if(leftArr[i] > rightArr[j]) {
 				arr[k] = rightArr[j];
 				j ++;
-				k ++;
-			}	
+			}
+			k ++;	
 		}
 
 		while(i < n1) {
@@ -105,9 +104,7 @@ public class Sorting {
 		if(left >= right) {
 			return;
 		}
-
 		int pivot = partition(arr, left, right);
-		
 		quickSort(arr, left, pivot - 1);
 		quickSort(arr, pivot + 1, right);
 	}
@@ -121,10 +118,9 @@ public class Sorting {
 				swap(arr, i, j);
 			}
 		}
-		
-		swap(arr, i + 1, right);
-		
-		return i + 1;
+		i ++;
+		swap(arr, i, right);
+		return i;
 	}
 
 	// Driver
