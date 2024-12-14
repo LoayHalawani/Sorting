@@ -162,19 +162,18 @@ public class Sorting {
 
 	// Driver
 	public static void main(String[] args) {
-		// int[] arr = {9, 8, 7, 6, 5, 4, 3, 2, 1};
-		int[] arr = {1, 5, 3, 2, 7, 4, 9, 8};
+		int[] arr = {1, 5, 2, 3, 7, 4, 6, 9, 8};
 
 		System.out.print("Array: ");
 		System.out.println(Arrays.toString(arr));
 
 		System.out.println("\nSorting...");
 		
-		// bubbleSort(arr);
-		// selectionSort(arr);
-		// insertionSort(arr);
-		// mergeSort(arr, 0, arr.length - 1);
-		// quickSort(arr, 0, arr.length - 1);
+		bubbleSort(arr);
+		selectionSort(arr);
+		insertionSort(arr);
+		mergeSort(arr, 0, arr.length - 1);
+		quickSort(arr, 0, arr.length - 1);
 		heapSort(arr);
 		
 		System.out.print("\nArray: ");
