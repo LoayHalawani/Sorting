@@ -162,7 +162,7 @@ public class Sorting {
 
 	// Driver
 	public static void main(String[] args) {
-		int[] arr = {1, 5, 2, 3, 7, 4, 6, 9, 8};
+		int[] arr = {9, 8, 7, 6, 5, 4, 3, 2, 1};
 
 		System.out.print("Array: ");
 		System.out.println(Arrays.toString(arr));
