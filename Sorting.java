@@ -131,8 +131,6 @@ public class Sorting {
 			heapify(arr, i, arr.length);
 		}
 
-		System.out.println(Arrays.toString(arr));
-
 		// Delete from Heap
 		int n = arr.length - 1;
 		while(n > 0) {
