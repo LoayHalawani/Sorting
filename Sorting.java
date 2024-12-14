@@ -124,20 +124,60 @@ public class Sorting {
 		return i;
 	}
 
+	// Heap Sort
+	private static void heapSort(int[] arr) {
+		// Convert tree to Max Heap
+		for(int i = (arr.length / 2) - 1; i >= 0; i --) {
+			heapify(arr, i, arr.length);
+		}
+
+		System.out.println(Arrays.toString(arr));
+
+		// Delete from Heap
+		int n = arr.length - 1;
+		while(n > 0) {
+			swap(arr, 0, n);
+			heapify(arr, 0, n);
+			n --;
+		}
+	}
+
+	private static void heapify(int[] arr, int i, int n) {
+		int left = (2 * i) + 1;
+		int right = left + 1;
+
+		int max = i;
+
+		if(left < n && arr[left] > arr[max]) {
+			max = left;
+		}
+
+		if(right < n && arr[right] > arr[max]) {
+			max = right;
+		}
+
+		if(max > i) {
+			swap(arr, i, max);
+			heapify(arr, max, n);
+		}
+	}
+
 	// Driver
 	public static void main(String[] args) {
-		int[] arr = {9, 8, 7, 6, 5, 4, 3, 2, 1};
+		// int[] arr = {9, 8, 7, 6, 5, 4, 3, 2, 1};
+		int[] arr = {1, 5, 3, 2, 7, 4, 9, 8};
 
 		System.out.print("Array: ");
 		System.out.println(Arrays.toString(arr));
 
 		System.out.println("\nSorting...");
 		
-		bubbleSort(arr);
-		selectionSort(arr);
-		insertionSort(arr);
-		mergeSort(arr, 0, arr.length - 1);
-		quickSort(arr, 0, arr.length - 1);
+		// bubbleSort(arr);
+		// selectionSort(arr);
+		// insertionSort(arr);
+		// mergeSort(arr, 0, arr.length - 1);
+		// quickSort(arr, 0, arr.length - 1);
+		heapSort(arr);
 		
 		System.out.print("\nArray: ");
 		System.out.println(Arrays.toString(arr));
