@@ -2,7 +2,7 @@
 
 A Java implementation of several sorting algorithms. Includes Bubble, Selection, Insertion, Merge, Quick, and Heap Sort.
 
-# How-to-run
+# Usage
 
 1. Clone the repository
 	- git clone https://github.com/LoayHalawani/Sorting.git
